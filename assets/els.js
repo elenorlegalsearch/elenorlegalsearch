@@ -57,4 +57,13 @@
       } else { done(false); }
     });
   });
+
+  // Anfrageformular: Position aus der Liste wählen ODER selbst eintragen
+  var sel = document.getElementById("f-position"), free = document.getElementById("f-position-frei");
+  if (sel && free) {
+    var check = function () {
+      sel.setCustomValidity(sel.value || free.value.trim() ? "" : "Bitte wählen Sie eine Position aus oder tragen Sie sie selbst ein.");
+    };
+    sel.addEventListener("change", check); free.addEventListener("input", check); check();
+  }
 })();
