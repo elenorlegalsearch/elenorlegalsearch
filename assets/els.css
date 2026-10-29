@@ -1,6 +1,7 @@
 /* ELS – Elenor Legal Search · Grunddesign (Smaragdgrün & Gold)
    Ergänzt site.css (Reiter, Logo, Wegweiser, Vergleich, Vakanzen, Bewerberseite). */
 :root{
+  color-scheme:light only;
   --em-950:#072B23;--em-900:#0A3B30;--em-800:#0F5C4A;--em-700:#14664F;
   --gold:#B8913A;--gold-lt:#DCC488;--gold-dk:#8C6D2C;
   --ink:#0B2A23;--text:#374151;--muted:#5E6E67;--line:#E3E5EA;--paper:#FBFAF7;--tint:#EEF3F0;
@@ -67,12 +68,23 @@ p{margin:0}
 .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
 .hero::before{left:-220px;top:-260px;width:620px;height:620px;border:1px solid rgba(220,196,136,.22)}
 .hero::after{left:-120px;top:-160px;width:420px;height:420px;border:1px solid rgba(220,196,136,.16)}
-.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:center;padding-block:clamp(56px,8vw,112px)}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:center;padding-block:clamp(40px,5vw,72px)}
 .hero .eyebrow{color:var(--gold-lt);letter-spacing:.2em}
 .hero .eyebrow::after{content:"";display:block;width:72px;height:2px;margin-top:14px;background:var(--gold)}
 .hero h1{color:#FFFFFF}
 .hero .els-h1-sub{color:var(--gold-lt);font-weight:500}
-.hero .lead{color:rgba(255,255,255,.84);margin:22px 0 26px}
+.hero h1{font-size:clamp(34px,3.6vw,52px);line-height:1.08}
+.hero .lead{color:rgba(255,255,255,.84);margin:18px 0 22px}
+.hero .lead strong{color:var(--gold-lt);font-weight:600}
+.pain{background:#FFFFFF;color:var(--ink);border-radius:16px;padding:26px 26px 24px;box-shadow:0 24px 60px rgba(0,0,0,.28);border-top:4px solid var(--gold)}
+.pain-q{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:12px}
+.pain-q2{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);color:var(--em-800)}
+.pain ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.pain li{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:var(--ink)}
+.pain-no li{color:var(--text)}
+.pain-yes li{font-weight:500}
+.pain-yes svg{stroke:var(--em-800)!important}
+.pain svg{flex:none;margin-top:3px;stroke:#B4483A}
 .hero .els-usp{margin-bottom:28px}
 .hero .els-usp-item{background:rgba(255,255,255,.06);border-color:rgba(220,196,136,.35)}
 .hero .els-usp-item strong{color:#FFFFFF}
@@ -248,3 +260,32 @@ footer.ftr{background:var(--em-900);color:rgba(255,255,255,.78);border-top:4px s
 .err404 .ctas{justify-content:center;margin-top:28px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.acc summary::after{transition:none}}
 @media print{.els-topbar,.hdr,footer.ftr{display:none}}
+
+.sample{margin-top:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;padding:clamp(24px,3vw,36px);border-radius:16px;background:var(--em-900);border-bottom:4px solid var(--gold)}
+.sample .eyebrow{color:var(--gold-lt)}
+.sample-h{font-family:var(--serif);font-size:clamp(24px,2.4vw,30px);font-weight:600;color:#FFFFFF;line-height:1.2}
+.sample .note{color:rgba(255,255,255,.75)}
+@media (max-width:860px){.sample{grid-template-columns:1fr}}
+@media (max-width:480px){.hdr .els-logo-word{display:none}.hdr .btn-sm{white-space:nowrap}}
+
+/* ===== Dezentere Variante: heller Einstieg, Grün als Akzent ===== */
+.hero{color:var(--ink);background:radial-gradient(900px 420px at 88% -10%,rgba(220,196,136,.28),transparent 70%),linear-gradient(135deg,#F8FBF9 0%,#EEF5F1 55%,#E4EFE9 100%);border-bottom:4px solid var(--gold)}
+.hero::before{border-color:rgba(15,92,74,.10)}
+.hero::after{border-color:rgba(15,92,74,.07)}
+.hero .eyebrow{color:var(--gold-dk)}
+.hero h1{color:var(--em-900)}
+.hero .els-h1-sub{color:var(--gold-dk)}
+.hero .lead{color:var(--text)}
+.hero .lead strong{color:var(--em-800)}
+.hero .trust li{color:var(--text)}
+.hero .trust svg{stroke:var(--em-800)}
+.hero .btn-gold{background:var(--em-900);border-color:var(--em-900);color:#FFFFFF}
+.hero .btn-gold:hover{background:var(--em-950);color:#FFFFFF}
+.hero .btn-ghost{background:#FFFFFF;color:var(--em-900);border-color:#C9D0DA}
+.hero .btn-ghost:hover{background:var(--tint);color:var(--em-900)}
+.hero .pain{box-shadow:0 18px 44px rgba(10,59,48,.12);border:1px solid var(--line);border-top:4px solid var(--gold)}
+.cand-hero ul.ticks li,.cand-hero .trust li{color:var(--text)}
+.sec-dark{background:repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 1px,transparent 1px 34px),linear-gradient(100deg,#0F5C4A 0%,#14664F 50%,#1B7259 100%)}
+.sample{background:var(--em-800)}
+.els-vac{background:repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 1px,transparent 1px 34px),linear-gradient(100deg,#0F5C4A 0%,#14664F 50%,#1B7259 100%)}
+.cards.four{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
