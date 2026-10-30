@@ -1,14 +1,14 @@
-/* ELS – Besucherstatistik (Pirsch, cookielos, Server in Deutschland).
-   Solange PIRSCH_CODE leer ist, wird NICHTS geladen und es werden keine Daten erhoben.
-   Aktivierung: Pirsch-Konto anlegen, Website hinzufügen, den "Identification Code" hier eintragen
-   und den Abschnitt zur Webanalyse in datenschutz.html freischalten. */
+/* ELS – Besucherstatistik mit Umami Cloud (cookielos, Datenregion EU).
+   Lädt das Umami-Skript auf allen Seiten. Browser mit aktivem „Do Not Track“ werden nicht erfasst.
+   Zum Abschalten: UMAMI_ID leeren – dann wird nichts geladen und der Abschnitt in datenschutz.html anpassen. */
 (function () {
-  var PIRSCH_CODE = "";
-  if (!PIRSCH_CODE) return;
+  var UMAMI_ID = "6320ab2a-14e1-4d5d-b8ca-97e6df544de8";
+  if (!UMAMI_ID) return;
   var s = document.createElement("script");
   s.defer = true;
-  s.src = "https://api.pirsch.io/pa.js";
-  s.id = "pianjs";
-  s.setAttribute("data-code", PIRSCH_CODE);
+  s.src = "https://cloud.umami.is/script.js";
+  s.setAttribute("data-website-id", UMAMI_ID);
+  s.setAttribute("data-do-not-track", "true");
+  s.setAttribute("data-domains", "www.elenorlegalsearch.com,elenorlegalsearch.com");
   document.head.appendChild(s);
 })();
