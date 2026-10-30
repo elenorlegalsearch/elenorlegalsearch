@@ -25,7 +25,7 @@
     "Legal Recruiting von einer Diplomjuristin · bundesweit": "Legal recruitment by a law graduate (Diplomjuristin) · across Germany",
     "Jurist:innen, vermittelt von einer Diplomjuristin.": "Legal talent, placed by a law graduate.",
     "Mit Fachkenntnis statt Stichwortsuche.": "Legal expertise instead of keyword matching.",
-    "Als Diplomjuristin mit Kanzleipraxis vermittle ich juristisches Personal – von ReFa/ReNo bis Counsel. Examen, Prädikat, Schwerpunkt und Rechtsgebiet ordne ich fachlich ein, bevor ich Ihnen jemanden vorstelle. So erhalten Kanzleien und Rechtsabteilungen Kandidat:innen, die wirklich passen.": "As a law graduate (Diplomjuristin) with law-firm experience, I place legal professionals – from paralegals to counsel. I assess state exams, grades, specialisations and practice areas with a jurist’s eye before I introduce anyone. That is how law firms and legal departments get candidates who truly fit.",
+    "Als Diplomjuristin mit Kanzleipraxis und Recruiting-Erfahrung arbeite ich an der Schnittstelle von Recht und HR. Examen, Prädikat und Schwerpunkt ordne ich fachlich ein – so erhalten Kanzleien und Rechtsabteilungen Kandidat:innen, die wirklich passen.": "As a law graduate with law-firm and recruiting experience, I work at the interface of law and HR. I assess exams, grades and specialisations with a jurist’s eye – so law firms and legal departments get candidates who truly fit.",
     "Juristisch geprüft": "Legally assessed",
     "Unterlagen liest eine Diplomjuristin – kein Keyword-Filter.": "Applications are read by a law graduate (Diplomjuristin) – not a keyword filter.",
     "Praxis aus Kanzlei & HR": "Law-firm & HR experience",
