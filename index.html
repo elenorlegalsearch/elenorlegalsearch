@@ -331,7 +331,7 @@
       <p class="els-apply-hint" style="margin:0">Kein E-Mail-Programm eingerichtet? Senden Sie die Unterlagen einfach aus Ihrem Webmail an <a href="mailto:info@elenorlegalsearch.de">info@elenorlegalsearch.de</a>, gern mit dem Betreff „Personalanfrage“. Am besten als PDF, insgesamt höchstens ca. 20 MB.</p>
     </div>
     </div>
-    <form class="f" action="https://formspree.io/f/xgaaydzk" method="POST" accept-charset="UTF-8">
+    <form class="f" action="https://forms.formward.eu/f/89f390ad-ef2e-484c-b6c4-9426ccb38560" method="POST" accept-charset="UTF-8">
       <input type="hidden" name="_subject" value="Neue Personalanfrage über elenorlegalsearch.com">
       <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="grid2">
@@ -358,7 +358,66 @@
       <label class="consent"><input name="datenschutz" type="checkbox" value="ja" required><span>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage einverstanden.</span></label>
       <button class="btn" type="submit" style="width:100%">Fachkraft unverbindlich anfragen</button>
       <p class="fineprint">Verschlüsselte Übertragung · Unverbindlich · Anfrage kostenfrei</p>
+      <div class="f-status" role="status" aria-live="polite" hidden></div>
     </form>
+    <style>
+      .f-status{padding:14px 16px;border-radius:10px;font-size:15px;line-height:1.5;border:1px solid var(--line);background:var(--tint)}
+      .f-status.ok{border-color:#2F7A4F;background:#EAF5EE;color:#164A2E}
+      .f-status.err{border-color:#A23A2E;background:#FBECEA;color:#6E231B}
+      .f-status strong{display:block;margin-bottom:2px}
+      form.f button[disabled]{opacity:.6;cursor:wait}
+    </style>
+    <script>
+    (function () {
+      var form = document.querySelector('form.f[action*="formward.eu"]');
+      if (!form || !window.fetch) return;
+      var box = form.querySelector(".f-status"), btn = form.querySelector('button[type="submit"]');
+      function en() { return document.documentElement.lang === "en"; }
+      function show(kind, title, text) {
+        box.className = "f-status " + kind;
+        box.innerHTML = "";
+        var t = document.createElement("strong"); t.textContent = title; box.appendChild(t);
+        box.appendChild(document.createTextNode(text));
+        box.hidden = false;
+        box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (!form.reportValidity()) return;
+        var label = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = en() ? "Sending …" : "Wird gesendet …";
+        box.hidden = true;
+        fetch(form.action, {
+          method: "POST",
+          headers: { "Accept": "application/json" },
+          body: new URLSearchParams(new FormData(form))
+        })
+          .then(function (r) {
+            return r.json().catch(function () { return {}; }).then(function (d) { return { status: r.status, data: d }; });
+          })
+          .then(function (res) {
+            if (res.data && res.data.ok) {
+              form.reset();
+              form.querySelectorAll("details[open]").forEach(function (d) { d.open = false; });
+              show("ok", en() ? "Thank you for your enquiry!" : "Vielen Dank für Ihre Anfrage!",
+                en() ? "I will get back to you within 24 hours on working days." : "Ich melde mich innerhalb von 24 Stunden an Werktagen bei Ihnen.");
+              return;
+            }
+            var msg;
+            if (res.status === 429) msg = en() ? "Too many requests in a short time. Please wait a moment and try again." : "Zu viele Anfragen in kurzer Zeit. Bitte warten Sie einen Moment und versuchen Sie es erneut.";
+            else if (res.status === 402) msg = en() ? "The form cannot accept enquiries at the moment. Please email info@elenorlegalsearch.de instead." : "Das Formular nimmt gerade keine Anfragen an. Bitte schreiben Sie mir direkt an info@elenorlegalsearch.de.";
+            else msg = (res.data && res.data.error ? res.data.error + " " : "") + (en() ? "Please try again or email info@elenorlegalsearch.de." : "Bitte versuchen Sie es erneut oder schreiben Sie an info@elenorlegalsearch.de.");
+            show("err", en() ? "Your enquiry could not be sent." : "Ihre Anfrage konnte nicht gesendet werden.", msg);
+          })
+          .catch(function () {
+            show("err", en() ? "Your enquiry could not be sent." : "Ihre Anfrage konnte nicht gesendet werden.",
+              en() ? "Please check your connection or email info@elenorlegalsearch.de." : "Bitte prüfen Sie Ihre Internetverbindung oder schreiben Sie an info@elenorlegalsearch.de.");
+          })
+          .finally(function () { btn.disabled = false; btn.textContent = label; });
+      });
+    })();
+    </script>
   </div>
 </section>
 
