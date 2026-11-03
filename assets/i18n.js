@@ -103,7 +103,7 @@
     "Englisch": "English",
     "Verhandlungssicher": "Business fluent",
     "Name, Kontaktdaten und Lebenslauf erst nach Zustimmung der Person.": "Name, contact details and CV only with the person’s consent.",
-    "So sehen die Kurzprofile aus, die Sie nach einer Anfrage erhalten.": "This is what the profiles you receive after a request look like.",
+    "So könnte ein kostenloses Vorab-Kurzprofil aussehen. Kommt es zum Vertragsschluss, erhalten Sie von mir ausführliche Candidate Summaries.": "This is what a free preliminary short profile could look like. Once a contract is signed, you receive detailed candidate summaries from me.",
 
     // Wegweiser
     "Wegweiser": "Where to go",
@@ -176,6 +176,7 @@
     "Rechtsfachwirt:innen": "Senior paralegals (Rechtsfachwirt:innen)",
     "Wissenschaftliche Mitarbeiter:innen": "Research associates",
     "Diplom- & Wirtschaftsjurist:innen": "Law graduates & business lawyers",
+    "Diplomjurist:innen": "Law graduates",
     "Volljurist:innen / Associates": "Fully qualified lawyers / associates",
     "Syndikusrechtsanwält:innen": "In-house counsel (Syndikusrechtsanwält:innen)",
     "Counsel": "Counsel",
@@ -303,6 +304,7 @@
     "Bitte wählen": "Please select",
     "Wissenschaftliche Mitarbeiter:in": "Research associate",
     "Diplom- / Wirtschaftsjurist:in": "Law graduate / business lawyer",
+    "Diplomjurist:in": "Law graduate",
     "Volljurist:in / Associate": "Qualified lawyer / associate",
     "Syndikusrechtsanwält:in": "In-house counsel",
     "Freelancer:in / Projektjurist:in": "Freelancer / project lawyer",
