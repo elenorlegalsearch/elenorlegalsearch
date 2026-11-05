@@ -243,7 +243,7 @@
     "Teilbetrag bei Vorstellung": "Part payment upon introduction",
     "Fällig mit Übermittlung des ersten geprüften Kandidatenprofils.": "Due when the first vetted candidate profile is sent.",
     "Restbetrag nach bestandener Probezeit": "Balance after the probation period",
-    "Den letzten Teil verlange ich erst, wenn die vermittelte Person in Ihrem Team angekommen ist – und passt es doch nicht, suche ich kostenlos nach.": "I only charge the last instalment once the placed person has settled into your team – and if it doesn’t work out, I search for a replacement free of charge.",
+    "Den letzten Teil verlange ich erst, wenn die vermittelte Person in Ihrem Team angekommen ist – und passt es doch nicht, suche ich einmalig kostenlos nach.": "I only charge the last instalment once the placed person has settled into your team – and if it doesn’t work out, I search once for a replacement free of charge.",
     "Die Höhe richtet sich nach Position und Bruttojahresgehalt der eingestellten Person und wird vorab im Angebot festgelegt. Keine Arbeitnehmerüberlassung – die Person wird direkt bei Ihnen angestellt oder beauftragt.": "The amount depends on the position and the gross annual salary of the person hired and is fixed in advance in the quote. No temporary agency work – the person is employed or engaged directly by you.",
 
     // Über mich
@@ -381,7 +381,7 @@
     "Bei ELS": "With ELS",
     "Erstbesetzung: Restbetrag erst nach bestandener Probezeit": "First placement: balance only after the probation period",
     "Erstbesetzung: Ich trage das Risiko in der Probezeit mit": "First placement: I share the probation risk",
-    "Kostenlose Nachbesetzung bei jedem Auftrag, falls es nicht passt": "Free replacement on every mandate if it doesn’t work out",
+    "Einmalig kostenlose Nachbesetzung bei jedem Auftrag, falls es in der Probezeit nicht passt (nicht bei betriebsbedingter Kündigung)": "One free replacement on every mandate if it doesn’t work out during the probation period (not in case of dismissal for operational reasons)",
     "Was passiert, wenn die vermittelte Person die Probezeit nicht besteht?": "What happens if the placed person does not pass the probation period?",
     "Bei Ihrer ersten Besetzung entfällt dann der Restbetrag – vorausgesetzt, die Person geht selbst oder Sie trennen sich aus Gründen, die in ihrer Person oder ihrem Verhalten liegen. Zusätzlich suche ich einmalig kostenlos eine Nachfolgerin oder einen Nachfolger für dieselbe Position. Den Restbetrag zahlen Sie erst, wenn diese Person die Probezeit besteht. Bei weiteren Aufträgen bleibt das Honorar zwar geschuldet, die kostenlose Nachbesetzung erhalten Sie aber ebenfalls.": "For your first placement, the balance is then waived – provided the person leaves of their own accord or you part ways for reasons relating to their person or conduct. In addition, I search once, free of charge, for a successor for the same position. You pay the balance only once that person passes the probation period. For further mandates the fee remains due, but you also receive the free replacement.",
     "Vertrags- und Zivilrecht": "Contract & civil law",
