@@ -1,0 +1,67 @@
+/* ELS – Unterlagen-Upload für Bewerber:innen (Forminit, EU-gehostet)
+   Nutzt die vorhandenen Farb-Tokens aus els.css. */
+.els-up{margin-top:34px;padding:28px;border-radius:12px;background:#fff;border:1px solid #E3E5EA}
+.els-up h3{margin:0 0 6px;font-family:"Cormorant Garamond",Newsreader,Georgia,serif;font-weight:600;font-size:28px;line-height:1.1;color:var(--ink,#0B2A23)}
+.els-up-intro{margin:0 0 22px;font-size:14.5px;color:var(--muted,#5E6E67)}
+.els-up-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px;margin-bottom:20px}
+.els-up-grid .els-prof-field input,.els-up-grid .els-prof-field textarea{width:100%;box-sizing:border-box}
+.els-up *,.els-up *::before,.els-up *::after{box-sizing:border-box}
+.els-up-req{color:var(--gold-dk,#8C6D2C)}
+
+/* Dropzone */
+.els-drop{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:170px;padding:26px 20px;text-align:center;border:1.5px dashed #C9D0DA;border-radius:12px;background:var(--paper,#FBFAF7);cursor:pointer;transition:border-color .25s,background .25s,box-shadow .25s}
+.els-drop:hover,.els-drop.is-over{border-color:var(--em-700,#14664F);background:var(--tint,#EEF3F0)}
+.els-drop:focus-within{box-shadow:0 0 0 4px rgba(20,102,79,.14);border-color:var(--em-700,#14664F)}
+.els-drop.is-error{border-color:#B4472F;background:#FFF6F3}
+.els-drop input[type=file]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.els-drop-icon{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--em-900,#0A3B30);color:var(--gold-lt,#DCC488)}
+.els-drop strong{font-size:16px;color:var(--ink,#0B2A23)}
+.els-drop strong u{text-decoration-color:var(--gold,#B8913A);text-underline-offset:3px}
+.els-drop small{font-size:13px;color:var(--muted,#5E6E67)}
+
+.els-files{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.els-files li{display:grid;grid-template-columns:34px 1fr auto auto;gap:12px;align-items:center;padding:10px 12px;border-radius:10px;background:var(--tint,#EEF3F0);font-size:14px;color:var(--ink,#0B2A23)}
+.els-files .ic{display:grid;place-items:center;width:34px;height:34px;border-radius:8px;background:#fff;color:var(--em-800,#0F5C4A);font:700 10px/1 Inter,system-ui,sans-serif;letter-spacing:.04em}
+.els-files .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}
+.els-files .sz{color:var(--muted,#5E6E67);font-size:13px;white-space:nowrap}
+.els-files button{display:grid;place-items:center;width:30px;height:30px;border:0;border-radius:50%;background:#fff;color:var(--em-900,#0A3B30);cursor:pointer;font-size:18px;line-height:1}
+.els-files button:hover{background:var(--em-900,#0A3B30);color:#fff}
+.els-meter{margin-top:10px;font-size:13px;color:var(--muted,#5E6E67)}
+.els-meter.over{color:#B4472F;font-weight:600}
+
+.els-consent{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;margin:22px 0 0;font-size:14px;line-height:1.55;color:var(--text,#374151)}
+.els-consent input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--em-900,#0A3B30)}
+.els-consent a{color:var(--em-800,#0F5C4A);text-decoration:underline;text-underline-offset:3px}
+.els-hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+
+.els-up-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:22px}
+.els-up-submit{position:relative;display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border:0;border-radius:6px;background:var(--em-900,#0A3B30);color:#fff;font:600 16px/1.2 Inter,system-ui,sans-serif;cursor:pointer;transition:background .25s,transform .25s}
+.els-up-submit:hover{background:var(--em-700,#14664F)}
+.els-up-submit:active{transform:translateY(1px)}
+.els-up-submit[disabled]{opacity:.7;cursor:progress}
+.els-up-submit .spin{display:none;width:16px;height:16px;border-radius:50%;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;animation:els-spin .8s linear infinite}
+.els-up-submit.is-busy .spin{display:inline-block}
+@keyframes els-spin{to{transform:rotate(360deg)}}
+.els-up-note{font-size:13px;color:var(--muted,#5E6E67)}
+
+.els-progress{height:6px;border-radius:99px;background:var(--tint,#EEF3F0);overflow:hidden;margin-top:16px;display:none}
+.els-progress.on{display:block}
+.els-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--em-700,#14664F),var(--gold,#B8913A));transition:width .2s}
+
+.els-status{margin-top:18px;padding:16px 18px;border-radius:10px;font-size:14.5px;line-height:1.55}
+.els-status strong{display:block;margin-bottom:4px;font-size:15.5px}
+.els-status.ok{background:var(--tint,#EEF3F0);color:var(--em-900,#0A3B30);border:1px solid rgba(20,102,79,.25)}
+.els-status.err{background:#FFF6F3;color:#7A2E1F;border:1px solid #F1C9BD}
+.els-status a{color:inherit;font-weight:600}
+
+.els-alt{margin-top:18px;font-size:13.5px;color:var(--muted,#5E6E67)}
+.els-alt a{color:var(--em-800,#0F5C4A);font-weight:600}
+
+@media (max-width:700px){
+  .els-up{padding:20px}
+  .els-up-grid{grid-template-columns:1fr}
+  .els-files li{grid-template-columns:30px 1fr auto}
+  .els-files .sz{display:none}
+  .els-up-submit{width:100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){.els-up-submit .spin{animation:none}}
