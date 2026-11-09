@@ -133,8 +133,8 @@
     if (section) {
       var lead = section.querySelector(".head .lead"); if (lead) lead.textContent = t.lead;
       var steps = section.querySelectorAll(".els-apply-steps li");
-      if (steps[1]) { steps[1].querySelector("strong").textContent = t.s2t; steps[1].querySelector("div span").textContent = t.s2d; }
-      if (steps[2]) { steps[2].querySelector("strong").textContent = t.s3t; steps[2].querySelector("div span").textContent = t.s3d; }
+      if (steps[1]) { steps[1].querySelector("strong").textContent = t.s2t; steps[1].querySelector(":scope > div > span").textContent = t.s2d; }
+      if (steps[2]) { steps[2].querySelector("strong").textContent = t.s3t; steps[2].querySelector(":scope > div > span").textContent = t.s3d; }
     }
     renderList();
     var mailLink = box.querySelector("[data-up-mail]");
